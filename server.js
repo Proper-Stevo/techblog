@@ -42,3 +42,8 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening to the coolest server... http://localhost:3001'));
 });
+
+
+
+
+//missing stuff "layouts/folder" inside //main.handlebars all go inside the views
