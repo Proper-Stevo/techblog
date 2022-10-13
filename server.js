@@ -12,11 +12,12 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Set up Handlebars.js engine with custom helpers
-const hbs = exphbs.create({  });
+const hbs = exphbs.create({ helpers });
 
 const sess = {
   secret: 'Super secret secret',
   cookie: {
+  maxAge: 300000,
   },
   resave: false,
   saveUninitialized: true,
@@ -43,7 +44,3 @@ sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening to the coolest server... http://localhost:3001'));
 });
 
-
-
-
-//missing stuff "layouts/folder" inside //main.handlebars all go inside the views
